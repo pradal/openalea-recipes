@@ -1,6 +1,6 @@
 package:
   name: alinea.caribu
-  version: 7.0.0
+  version: 7.0.1
 
 source:
   git_url: https://github.com/openalea-incubator/caribu
