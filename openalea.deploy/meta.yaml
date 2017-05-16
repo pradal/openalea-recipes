@@ -1,10 +1,10 @@
 package:
   name: openalea.deploy
-  version: 2.1.0
+  version: 2.1.1
 
 source:
   git_url: https://github.com/openalea/deploy
-  git_rev: v2.1.0
+  git_rev: v2.1.1
 
 build:
   number: 0
