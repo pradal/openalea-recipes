@@ -1,17 +1,19 @@
 package:
   name: openalea.sconsx
-  version: 2.0.1
+  version: 2.1.0
 
 source:
   git_url: https://github.com/openalea/sconsx
+  #path: ../../sconsx
 
 build:
   preserve_egg_dir: True
+  number: 1
 
 requirements:
   build:
     - python
-    - openalea.deploy
+    - openalea.deploy #==2.0.0
   run:
     - python
     - scons

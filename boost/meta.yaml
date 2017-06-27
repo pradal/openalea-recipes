@@ -1,12 +1,13 @@
 package:
   name: boost
-  version: 1.57.0
+  version: 1.64.0
 
 source:
-  fn:  boost_1_57_0.tar.bz2
-  url: http://sourceforge.net/projects/boost/files/boost/1.57.0/boost_1_57_0.tar.bz2
+  #fn:  boost_1_57_0.tar.bz2
+  #url: http://sourceforge.net/projects/boost/files/boost/1.57.0/boost_1_57_0.tar.bz2
   #md5: 6095876341956f65f9d35939ccea1a9f
-
+  fn: boost_1_64_0.tar.bz2
+  url: https://dl.bintray.com/boostorg/release/1.64.0/source/boost_1_64_0.tar.bz2
 build:
   features:
     - vc9               [win and py27]
@@ -26,6 +27,24 @@ requirements:
     - python
     - icu 54.*          [unix]
     - zlib
+
+test:
+  command:
+    # Verify Python headers
+    - test -f $PREFIX/include/boost/python.hpp
+
+    # Verify libraries
+    - test -f $PREFIX/lib/libboost_python.a                                                 # [unix]
+    - test -f $PREFIX/lib/libboost_python.dylib                                             # [osx]
+    - test -f $PREFIX/lib/libboost_python.so                                                # [linux]
+
+    - test -f $PREFIX/lib/libboost_system.a                                                 # [unix]
+    - test -f $PREFIX/lib/libboost_system.dylib                                             # [osx]
+    - test -f $PREFIX/lib/libboost_system.so                                                # [linux]
+
+    - test -f $PREFIX/lib/libboost_thread.a                                                 # [unix]
+    - test -f $PREFIX/lib/libboost_thread.dylib                                             # [osx]
+    - test -f $PREFIX/lib/libboost_thread.so                                                # [linux]
 
 about:
   home: http://www.boost.org/

@@ -18,7 +18,7 @@ requirements:
   # it doesn't really require python, but maybe that will fix
   # the missing bin directory
   build:
-   - boost 1.57.0
+   - boost 1.64.*
    - python
    - cmake
    - mpfr
@@ -26,7 +26,13 @@ requirements:
    - qt <5
    - patchelf [linux]
   run:
-   - boost 1.57.0
+   - boost 1.64.*
    - gmp
    - mpfr
    - qt <5
+
+test:
+  commands:
+    - test -f ${PREFIX}/include/CGAL/AABB_tree.h  # [unix]
+    - test -f ${PREFIX}/lib/libCGAL.so  # [linux]
+    - test -f ${PREFIX}/lib/libCGAL.dylib  # [osx]
