@@ -18,19 +18,23 @@ requirements:
   # it doesn't really require python, but maybe that will fix
   # the missing bin directory
   build:
-   - boost 1.64.*
+   - boost
    - python
    - cmake
-   - mpfr [linux, osx]
+   - mpfr [linux]
+   - mpfr [osx]
    - m2w64-mpfr [win]
-   - gmp  [linux, osx]
+   - gmp  [linux]
+   - gmp  [osx]
    - m2w64-gmp [win]
    - qt <5
    - patchelf [linux]
   run:
-   - boost 1.64.*
-   - gmp
-   - mpfr
+   - boost
+   - gmp  [linux]
+   - gmp  [osx]
+   - mpfr [linux]
+   - mpfr [osx]
    - qt <5
 
 test:
