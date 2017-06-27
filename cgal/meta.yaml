@@ -21,8 +21,10 @@ requirements:
    - boost 1.64.*
    - python
    - cmake
-   - mpfr
-   - gmp
+   - mpfr [linux, osx]
+   - m2w64-mpfr [win]
+   - gmp  [linux, osx]
+   - m2w64-gmp [win]
    - qt <5
    - patchelf [linux]
   run:
