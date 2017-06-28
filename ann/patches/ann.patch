@@ -1,0 +1,11 @@
+--- include/ANN/ANN.h	2010-01-28 04:40:01.000000000 +0000
++++ include/ANN/ANN.h	2017-06-28 17:17:33.000000000 +0100
+@@ -59,7 +59,7 @@
+ #ifndef ANN_H
+ #define ANN_H
+
+-#ifdef WIN32
++#ifdef WIN32 | WIN64
+   //----------------------------------------------------------------------
+   // For Microsoft Visual C++, externally accessible symbols must be
+   // explicitly indicated with DLL_API, which is somewhat like "extern."

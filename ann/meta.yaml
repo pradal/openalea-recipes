@@ -9,6 +9,7 @@ source:
 
     patches:
         - patches/cmake.patch
+        - patches/ann.patch
 
 
 build:
