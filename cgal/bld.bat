@@ -3,6 +3,8 @@ mkdir build && cd build
 set CMAKE_CONFIG="Release"
 
 cmake -LAH -G"NMake Makefiles"                ^
+  -DGMP_LIBRARIES="-L%LIBRARY_PREFIX%\mingw-w64\lib -lgmp"  ^
+  -DGMP_INCLUDE_DIR="%LIBRARY_PREFIX%\mingw-w64\include"         ^
   -DCMAKE_BUILD_TYPE="%CMAKE_CONFIG%"         ^
   -DCMAKE_PREFIX_PATH="%LIBRARY_PREFIX%"      ^
   -DCMAKE_INSTALL_PREFIX="%LIBRARY_PREFIX%"   ^
