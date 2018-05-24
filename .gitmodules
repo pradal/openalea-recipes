@@ -55,3 +55,6 @@
 [submodule "openalea.weberpenn"]
 	path = openalea.weberpenn
 	url = https://github.com/openalea/weberpenn
+[submodule "container"]
+	path = openalea.container
+	url = https://github.com/openalea/container
